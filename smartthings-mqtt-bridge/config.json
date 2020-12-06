@@ -1,0 +1,25 @@
+{
+  "name": "Smartthings MQTT Bridge",
+  "version": "1",
+  "slug": "smartthings_mqtt_bridge",
+  "description": "Allows Smartthings devices to push payloads into MQTT",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "discovery": ["mqtt"],
+  "services": ["mqtt:want"],
+  "options": {
+    "mqtt_host": "",
+    "mqtt_port": "",
+    "mqtt_username": "",
+    "mqtt_password": "",
+    "mqtt_preface": "smartthings"
+  },
+  "schema": {
+    "mqtt_conn": "str",
+    "mqtt_preface": "str"
+  },
+  "ports": {
+    "8080/tcp": 8080
+  }
+}
